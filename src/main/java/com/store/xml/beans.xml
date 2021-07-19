@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- main list ingredients -->
+	<bean id="ingredientListBean" class="com.store.entity.list.IngredientList">
+		<property name="listIngredients">
+	        <list value-type="com.store.entity.Ingredient">
+	            <ref bean="ingredientN1"/>
+	            <ref bean="ingredientN2"/>
+	            <ref bean="ingredientN3"/>
+	            <ref bean="ingredientN4"/>
+	            <ref bean="ingredientN5"/>
+	            <ref bean="ingredientN6"/>
+	        </list>
+    	</property>
+	</bean>
+	
+	<bean id="ingredientN1" class="com.store.entity.Ingredient" >
+		<property name="id" value="1"></property>
+		<property name="name" value="Strawberry"></property>
+		<property name="quantity" value="0"></property>
+		<property name="isFruit" value="true"></property>
+	</bean>
+	
+	<bean id="ingredientN2" class="com.store.entity.Ingredient">
+		<property name="id" value="2"></property>
+		<property name="name" value="Banana"></property>
+		<property name="quantity" value="0"></property>
+		<property name="isFruit" value="true" ></property>
+	</bean>
+	
+	<bean id="ingredientN3" class="com.store.entity.Ingredient">
+		<property name="id" value="3"></property>
+		<property name="name" value="Mango"></property>
+		<property name="quantity" value="0"></property>
+		<property name="isFruit" value="true" ></property>
+	</bean>
+	
+	<bean id="ingredientN4" class="com.store.entity.Ingredient">
+		<property name="id" value="4"></property>
+		<property name="name" value="Ice"></property>
+		<property name="quantity" value="0"></property>
+		<property name="isFruit" value="false" ></property>
+	</bean>
+	
+	<bean id="ingredientN5" class="com.store.entity.Ingredient">
+		<property name="id" value="5"></property>
+		<property name="name" value="Condensed Milk"></property>
+		<property name="quantity" value="0"></property>
+		<property name="isFruit" value="false" ></property>
+	</bean>
+	
+	<bean id="ingredientN6" class="com.store.entity.Ingredient">
+		<property name="id" value="6"></property>
+		<property name="name" value="Sugar"></property>
+		<property name="quantity" value="0"></property>
+		<property name="isFruit" value="false" ></property>
+	</bean>
+	
+	<!-- maint list of other ingredients -->
+	<bean id="recipieOtherListBean" class="com.store.entity.list.RecipeOtherList">
+		<property name="listRecipeOther">
+	        <list value-type="com.store.entity.RecipeOther">
+	            <ref bean="recipeOtherItem1"/>
+	            <ref bean="recipeOtherItem2"/>
+	            <ref bean="recipeOtherItem3"/>
+	        </list>
+    	</property>
+	</bean>
+	
+	<bean id="recipeOtherItem1" class="com.store.entity.RecipeOther" >
+		<property name="id" value="4"></property>
+		<property name="density" value="0.9168"></property>
+		<property name="recipePortion" value="30"></property>
+		<property name="recipePortionUnit" value="ml"></property>
+	</bean>
+	
+	<bean id="recipeOtherItem2" class="com.store.entity.RecipeOther" >
+		<property name="id" value="5"></property>
+		<property name="density" value="1.3"></property>
+		<property name="recipePortion" value="20"></property>
+		<property name="recipePortionUnit" value="ml"></property>
+	</bean>
+	
+	<bean id="recipeOtherItem3" class="com.store.entity.RecipeOther" >
+		<property name="id" value="6"></property>
+		<property name="density" value="1.59"></property>
+		<property name="recipePortion" value="8"></property>
+		<property name="recipePortionUnit" value="g"></property>
+	</bean>
+	
+	<!-- maint list of fruits ingredients -->
+	<bean id="recipieFruitListBean" class="com.store.entity.list.RecipeFruitList">
+		<property name="listRecipeFruit">
+	        <list value-type="com.store.entity.RecipeFruit">
+	            <ref bean="recipeFruitItem1"/>
+	            <ref bean="recipeFruitItem2"/>
+	            <ref bean="recipeFruitItem3"/>
+	        </list>
+    	</property>
+	</bean>
+	
+	<bean id="recipeFruitItem1" class="com.store.entity.RecipeFruit" >
+		<property name="id" value="1"></property>
+		<property name="gPer100ml" value="100"></property>
+	</bean>
+	
+	<bean id="recipeFruitItem2" class="com.store.entity.RecipeFruit" >
+		<property name="id" value="2"></property>
+		<property name="gPer100ml" value="120"></property>
+	</bean>
+	
+	<bean id="recipeFruitItem3" class="com.store.entity.RecipeFruit" >
+		<property name="id" value="3"></property>
+		<property name="gPer100ml" value="140"></property>
+	</bean>
+	
+	<!-- maint list of cups -->
+	<bean id="cupsListBean" class="com.store.entity.list.CupList">
+		<property name="listCups">
+	        <list value-type="com.store.entity.Cup">
+	            <ref bean="cupBeanN1"/>
+	            <ref bean="cupBeanN2"/>
+	            <ref bean="cupBeanN3"/>
+	        </list>
+    	</property>
+	</bean>
+	
+	<bean id="cupBeanN1" class="com.store.entity.Cup" >
+		<property name="id" value="1"></property>
+		<property name="name" value="Small"></property>
+		<property name="mlSize" value="300"></property>
+		<property name="price" value="1.95"></property>
+	</bean>
+	<bean id="cupBeanN2" class="com.store.entity.Cup" >
+		<property name="id" value="2"></property>
+		<property name="name" value="Medium"></property>
+		<property name="mlSize" value="500"></property>
+		<property name="price" value="3.25"></property>
+	</bean>
+	<bean id="cupBeanN3" class="com.store.entity.Cup" >
+		<property name="id" value="3"></property>
+		<property name="name" value="Large"></property>
+		<property name="mlSize" value="800"></property>
+		<property name="price" value="5"></property>
+	</bean>
+	
+</beans>
