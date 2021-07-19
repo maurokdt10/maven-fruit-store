@@ -39,6 +39,7 @@ public class FruitDrinkStoreApplication implements CommandLineRunner{
 			System.out.println("******** Fruit Drink Store *******");
 			System.out.println("**********************************");
 			System.out.println("*********** Git Test N-1 *********");
+			System.out.println("*********** Git Test N-4 *********");
 			System.out.println("Welcome "+userName);
 			this.ingredientService.beginInventory(userName);
 			while (mainControl) {
